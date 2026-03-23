@@ -1,81 +1,88 @@
 # Echo Move
 
-## 简介
+Echo Move 是一个面向个人运动数据的桌面应用，支持导入、整理、修复、可视化与分析 `FIT` / `GPX` / `TCX` 文件。应用采用 local-first 设计，活动数据默认保存在本地，不依赖账号体系或云端同步。
 
-  Echo Move 是一款**本地优先、隐私保护**的运动数据管理桌面应用。所有数据完全存储
-  在本地，无需注册账号，无需联网，让你完全掌控自己的运动数据。
+当前首个公开版本为 `0.0.1`。
 
-  无论你使用 Garmin、Wahoo 还是其他运动设备，Echo Move 都能统一管理你的
-  FIT、GPX、TCX 格式文件，提供直观的地图可视化和多维度数据分析。
+## 核心能力
 
-  ## 功能特性
+### 活动管理
 
-  ### 活动管理
-  - 支持拖拽导入 **FIT、GPX、TCX** 三大主流格式（逐渐扩展）
-  - 三种视图模式：**列表视图**、**轨迹墙视图**
-  - 多条件筛选：运动类型、时间范围
-  - 批量操作：多选、批量删除、批量导出（FIT / GPX）
-  - MD5 哈希自动去重，避免重复导入
+- 支持文件选择、拖拽和批量导入
+- 支持 `FIT`、`GPX`、`TCX` 三类主流运动文件
+- 提供列表视图与轨迹墙视图，方便整理和回看
+- 支持按关键词、运动类型、时间范围等条件快速筛选
+- 支持批量导出、数据修复与轨迹修复
+- 兼容不同坐标系统，活动数据默认仅保存在本地
 
-  ### 地图可视化
-  - 基于 **MapLibre GL** 的高性能地图渲染
-  - 多活动轨迹叠加展示
-  - 多种地图风格：默认、光照、暗景
-  - 轨迹样式自定义：颜色、线宽、透明度
-  - Douglas-Peucker 算法轨迹简化，流畅支持大数据量
+### 地图可视化
 
-  ### 活动详情
-  - 完整轨迹地图展示
-  - 多维度数据图表：速度、心率、海拔、踏频、功率
-  - 图表与地图联动：悬停时同步高亮对应位置
-  - 关键指标一览：距离、时长、配速、爬升等
+- 基于 MapLibre GL 的高性能轨迹渲染
+- 支持独立地图筛选、图例、统计卡片和最近活动高亮
+- 支持轨迹颜色、线宽、透明度与底图样式切换
+- 支持隐私模式、截图导出和海报导出
+- 可在大批量活动数据下保持流畅浏览体验
 
-  ### 工具模块
-  - **格式转换**：FIT / GPX / TCX 互相转换，支持批量处理
-  - **数据修复**：诊断并修复活动数据问题，重新计算指标
+### 统计与 AI Lab
 
-  ### 个性化设置
-  - 主题模式：明亮 / 深色 / 跟随系统
-  - 8 种强调色可选
-  - 迷雾模式：模糊敏感信息，保护隐私
-  - 语言切换：中文 / English
-  - 单位系统：公制 / 英制
+- 提供生涯总览、趋势统计、年度汇总和热力图视图
+- 统计页参考 Running-Page，并结合运动回看需求做了本地化调整
+- AI Lab 已支持归纳整理统计数据
+- AI Lab 已支持根据运动数据直接生成图表
 
-  ### 多用户支持
-  - 支持多用户独立管理数据，适合家庭共享使用
-  - 用户信息：昵称、头像、性别、生日、身高、体重
+### 工具与存储
 
-  ## 截图
+- 提供格式转换与数据修复工具
+- 支持多用户本地档案、主题、语言和存储管理
+- AI 功能需要先在应用设置中配置可用模型提供商
 
-  ![alt text](image.png)
+## 截图
 
-  ![alt text](image-1.png)
+### 地图页
 
-  ![alt text](image-2.png)
+![地图页](screenshot-map.png)
 
-  ## 下载
+### 活动列表
 
-  前往 [Releases](../../releases) 页面下载最新版本。
+![活动列表](screenshot-activity-list.png)
 
-  | 平台 | 文件 |
-  |------|------|
-  | macOS (Apple Silicon / Intel) | `Echo.Move-x.x.x.dmg` |
-  | Windows (64-bit) | `Echo.Move-Setup-x.x.x.exe` |
-  | Linux | `Echo.Move-x.x.x.AppImage` |
+### 轨迹墙
 
-  ## 系统要求
+![轨迹墙](screenshot-trajectory-wall.png)
 
-  | 平台 | 最低版本 |
-  |------|----------|
-  | macOS | 10.13 (High Sierra) |
-  | Windows | Windows 10 (64-bit) |
-  | Linux | Ubuntu 18.04 / Debian 10 |
+### 统计页
 
-  ## 数据存储位置
+![统计页](screenshot-stats.png)
 
-  所有数据完全存储在本地：
+### AI Lab
 
-  - **macOS**：`~/Library/Application Support/echo-move/`
-  - **Windows**：`%APPDATA%/echo-move/`
-  - **Linux**：`~/.config/echo-move/`
+![AI Lab 统计归纳](screenshot-ai-lab.png)
 
+![AI Lab 图表生成](screenshot-ai-chart.png)
+
+## 下载
+
+前往 [Releases](https://github.com/havebear/echo-move-release/releases) 页面下载最新版本。
+
+`0.0.1` 当前提供的安装包形态如下：
+
+| 平台 | 文件 |
+| --- | --- |
+| macOS (Apple Silicon) | `Echo Move-0.0.1-arm64.dmg` |
+| macOS (Intel) | `Echo Move-0.0.1-x64.dmg` |
+| Windows (64-bit) | `Echo Move-0.0.1-setup.exe` |
+| Linux (64-bit) | `Echo Move-0.0.1-x64.AppImage` / `Echo Move-0.0.1-x64.deb` |
+
+## 数据存储
+
+活动、用户和大部分配置默认存储在本地：
+
+- macOS: `~/Library/Application Support/echo-move/`
+- Windows: `%APPDATA%/echo-move/`
+- Linux: `~/.config/echo-move/`
+
+## 相关链接
+
+- 源码仓库: [havebear/echo-move](https://github.com/havebear/echo-move)
+- 发布仓库: [havebear/echo-move-release](https://github.com/havebear/echo-move-release)
+- 问题反馈: [Issues](https://github.com/havebear/echo-move/issues)
