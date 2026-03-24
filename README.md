@@ -62,7 +62,7 @@ Echo Move 是一个面向个人运动数据的桌面应用，支持导入、整�
 
 ### 微信群
 
-![微信群](screenshot-wechat-group.jpg)
+<img src="screenshot-wechat-group.jpg" alt="微信群" width="240" />
 
 ## 下载
 
