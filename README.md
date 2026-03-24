@@ -36,6 +36,24 @@ Echo Move 是一个面向个人运动数据的桌面应用，支持导入、整�
 - 支持多用户本地档案、主题、语言和存储管理
 - AI 功能需要先在应用设置中配置可用模型提供商
 
+## AI 配置
+
+AI Lab 需要先在 `设置 > AI 设置` 中添加可用模型配置。
+
+当前版本内置支持：
+
+- Anthropic Claude
+- DeepSeek
+- 通义千问
+- 智谱 GLM
+- Kimi
+- 豆包（火山方舟）
+- OpenAI 兼容服务
+
+各平台 `API Key` 的申请入口、配置方式和常见注意事项见：
+
+- [AI_API_KEY_GUIDE.md](AI_API_KEY_GUIDE.md)
+
 ## 截图
 
 ### 地图页
@@ -64,6 +82,12 @@ Echo Move 是一个面向个人运动数据的桌面应用，支持导入、整�
 
 <img src="screenshot-wechat-group.jpg" alt="微信群" width="240" />
 
+## 大模型 API Key 获取教程
+
+如果你准备使用 Echo Move 的 AI 功能，可以先查看：
+
+- [大模型 API Key 获取教程](./AI_API_KEY_GUIDE.md)
+
 ## 下载
 
 前往 [Releases](https://github.com/havebear/echo-move-release/releases) 页面下载最新版本。
@@ -89,3 +113,4 @@ Echo Move 是一个面向个人运动数据的桌面应用，支持导入、整�
 
 - 发布仓库: [havebear/echo-move-release](https://github.com/havebear/echo-move-release)
 - 下载页面: [Releases](https://github.com/havebear/echo-move-release/releases)
+- AI 配置说明: [AI_API_KEY_GUIDE.md](AI_API_KEY_GUIDE.md)
