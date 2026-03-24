@@ -60,6 +60,10 @@ Echo Move 是一个面向个人运动数据的桌面应用，支持导入、整�
 
 ![AI Lab 图表生成](screenshot-ai-chart.png)
 
+### 微信群
+
+![微信群](screenshot-wechat-group.jpg)
+
 ## 下载
 
 前往 [Releases](https://github.com/havebear/echo-move-release/releases) 页面下载最新版本。
