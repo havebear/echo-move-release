@@ -2,7 +2,15 @@
 
 Echo Move 是一个面向个人运动数据的桌面应用，支持导入、整理、修复、可视化与分析 `FIT` / `GPX` / `TCX` 文件。应用采用 local-first 设计，活动数据默认保存在本地，不依赖账号体系或云端同步。
 
-当前公开版本为 `0.0.3`。
+当前公开版本为 `0.0.10`。
+
+## 0.0.10 版本亮点
+
+- 活动详情新增自定义点位，可在二维/三维视图中标注备注、观景、补水、风险点与检查点，并直接关联到轨迹位置。
+- 地图显示控制更细，照片点位、自定义点位、关键点与标记大小都可以单独调节。
+- 二维/三维轨迹回放补充实时数据面板、多指标着色与自动全屏选项，回看活动过程更连贯。
+- 三维地形新增 `ultra` 精细度与 DEM 缓存管理，复杂路线下的地形细节与重访体验更稳定。
+- 相册预览性能、苹果健康导入识别，以及部分“运动时间 / 全程时间”口径问题已在本版修复。
 
 ## 核心能力
 
@@ -95,17 +103,23 @@ AI Lab 需要先在 `设置 > AI 设置` 中添加可用模型配置。
 更新日志与版本说明：
 
 - [CHANGELOG.md](./CHANGELOG.md)
+- [RELEASE_NOTES_0.0.10.md](./RELEASE_NOTES_0.0.10.md)
 - [RELEASE_NOTES_0.0.3.md](./RELEASE_NOTES_0.0.3.md)
 - [RELEASE_NOTES_0.0.1.md](./RELEASE_NOTES_0.0.1.md)
 
-`0.0.3` 当前提供的安装包形态如下：
+`0.0.10` 当前建议关注的安装包形态如下：
 
 | 平台 | 文件 |
 | --- | --- |
-| macOS (Apple Silicon) | `Echo Move-0.0.3-arm64.dmg` |
-| macOS (Intel) | `Echo Move-0.0.3-x64.dmg` |
-| Windows (64-bit) | `Echo Move-0.0.3-setup.exe` |
-| Linux (64-bit) | `Echo Move-0.0.3-x64.AppImage` / `Echo Move-0.0.3-x64.deb` |
+| macOS (Apple Silicon) | `Echo-Move-0.0.10-arm64.dmg` |
+| macOS (Intel) | `Echo-Move-0.0.10-x64.dmg` |
+| Windows (64-bit) | `Echo-Move-0.0.10-setup.exe` |
+| Linux (64-bit) | `Echo-Move-0.0.10-x64.AppImage` / 对应 `.deb` 安装包 |
+
+补充说明：
+
+- macOS 当前仍以“检测更新后打开发布页，手动下载安装”为主；Apple Silicon 设备请选择 `arm64`，Intel 设备请选择 `x64`。
+- 版本 `0.0.10` 的完整更新说明见 [RELEASE_NOTES_0.0.10.md](./RELEASE_NOTES_0.0.10.md)。
 
 ## 数据存储
 
